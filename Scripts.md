@@ -32,3 +32,9 @@ done
 - `vt scan ... -w`: Sends the file to VirusTotal and wait for the scan to complete before moving to the next file
 - `-i`: Include only 'last_analysis_stats' to keep the log clean
 - `sleep 15`: 15s delay is recommended for the Free API Tier (4 requests/min)
+
+### Control 
+
+`grep -B 1 "suspicious: [1-9]" scan_results.txt`
+
+If there is no result, then everything is fine. 
