@@ -35,28 +35,7 @@ alias youtube-audio='yt-dlp -x --audio-format m4a --add-metadata --embed-thumbna
 alias mirar='bat "$(fzf)"' # Visualizador rápido: Eliges un archivo con fzf y lo ves con bat (maneja espacios en nombres)
 
 # --- MANTENIMIENTO Y SISTEMA ---
-alias limpiarbrew='brew cleanup --prune=all && brew autoremove' # Borra basura y archivos temporales de Homebrew
 alias dsize='du -sh * | sort -h'                                # Muestra peso de archivos ordenados de menor a mayor
-
-# --- MANTENIMIENTO GLOBAL Y PERMISOS MULTI-USUARIO ---
-# Actualiza todo el sistema (Topgrade) gestionando permisos de Apps de otros usuarios
-topgrade() {
-    local USER2_NAME="a.contrerasflores"
-    local USER2_PATH="/Users/$USER2_NAME/Applications"
-    local USER=$(whoami)
-    echo "🔓 Abriendo paso para la actualización en $USER2_PATH..."
-    # Damos permiso temporal al grupo para que Brew trabaje
-    sudo chown -R "$USER":staff /Users/a.contrerasflores/Applications
-    sudo chmod 755 "$USER2_PATH"
-    echo "🚀 Ejecutando Topgrade..."
-    command topgrade
-    # Restauramos la propiedad al usuario original y cerramos con 700 (privado)
-    sudo chown -R "$USER2_NAME":staff "$USER2_PATH"
-    sudo chmod 700 "$USER2_PATH"
-
-    echo "\n🔒 Privacidad y dueños restaurados para $USER2_NAME."
-   
-}
 
 # --- INICIALIZACIONES ---
 # Activa la navegación inteligente de zoxide (aprende a qué carpetas vas más seguido)
