@@ -70,3 +70,6 @@ eval "$(starship init zsh)"
 # Decimos a fzf que use 'fd' para que sea más rápido e ignore basura (.git, etc.)
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# --- CONFIGURACION DE BAT (Document Viewer) ---
+export BAT_THEME="Coldark-Dark"
