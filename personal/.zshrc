@@ -74,7 +74,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--height 45% --layout=reverse --border --margin=1 --padding=1 \
 --color=bg:#1e1e2e,bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#cba6f7,info:#cba6f7,pointer:#f5c2e7 \
---color=marker:#f5c2e7,fg+:#f5c2e7,prompt:#cba6f7,hl+:#f38ba8"
+--color=marker:#f5c2e7,fg+:#f5c2e7,prompt:#cba6f7,hl+:#f38ba8 \
+--color=preview-bg:#1e1e2e,preview-fg:#cdd6f4"
 # Este comando mapea la "ç" (que es Alt+C en Mac) para que dispare el buscador de carpetas de fzf
 bindkey "ç" fzf-cd-widget
 

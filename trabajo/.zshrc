@@ -1,5 +1,5 @@
 # ===================================================================
-# MIS ALIASES Y CONFIGURACIÓN PERSONAL DE TERMINAL - @andreacontreras
+# MIS ALIASES Y CONFIGURACIÓN PERSONAL DE TERMINAL - @a.contrerasflores
 # ===================================================================
 
 # --- ATAJOS DE CONFIGURACIÓN ---
@@ -49,6 +49,14 @@ eval "$(starship init zsh)"
 # Decimos a fzf que use 'fd' para que sea más rápido e ignore basura (.git, etc.)
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+## Diseño (Vaporwave Matrix Edition)
+export FZF_DEFAULT_OPTS="--height 45% --layout=reverse --border --margin=1 --padding=1 \
+--color=bg:#111b27,bg+:#1f2d3d,spinner:#b7bdf8,hl:#62d6e8 \
+--color=fg:#b1ccd7,header:#91d7e3,info:#b7bdf8,pointer:#b7bdf8 \
+--color=marker:#b7bdf8,fg+:#ffffff,prompt:#91d7e3,hl+:#62d6e8 \
+--color=preview-bg:#111b27,preview-fg:#b1ccd7"
+# Este comando mapea la "ç" (que es Alt+C en Mac) para que dispare el buscador de carpetas de fzf
+bindkey "ç" fzf-cd-widget
 
 # --- CONFIGURACION DE BAT (Document Viewer) ---
 export BAT_THEME="Coldark-Dark"
