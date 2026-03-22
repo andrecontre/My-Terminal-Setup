@@ -104,9 +104,9 @@
 | :--- | :--- |
 | `fzf` | Abre un buscador interactivo de todos los archivos en la carpeta actual. |
 | `fzf --preview 'bat --color=always {}'` | Permite buscar archivos y ver su contenido (con bat) en una ventana lateral antes de abrirlos. |
-| `ls \| fzf` | Pasa la lista de archivos a fzf para seleccionar uno interactivamente. |
 | `CTRL + R` | (Atajo de teclado) Permite buscar en todo tu historial de comandos de la terminal de forma inteligente. |
 | `CTRL + T` | (Atajo de teclado) Busca archivos rápidamente para pegar la ruta directamente en el comando que estés escribiendo. |
+| `CTRL + C` | (Atajo de teclado) Navegar a siguiente carpeta interactivament |
 
 ## 🔝 Topgrade (`topgrade`)
 
