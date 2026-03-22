@@ -12,6 +12,28 @@ alias cat='bat'            # Muestra archivos con colores y sintaxis (mejor que 
 alias help='tldr'          # Muestra ejemplos prácticos de uso (resumen rapido de man)
 alias ls='eza --icons --group-directories-first --sort=extension' # Listado visual con iconos y carpetas primero
 
+# --- ATAJOS DE NAVEGACIÓN (Nuevos comandos) ---
+alias c='clear'            # Limpia la pantalla de la terminal rápidamente
+alias lsa='eza -a --icons --group-directories-first --sort=extension' # Listar TODO (incluyendo archivos ocultos)
+alias lsh='eza -a --icons --group-directories-first | grep "^\."'     # Mostrar ÚNICAMENTE los archivos ocultos
+alias lst='eza -T -lh --icons --group-directories-first --sort=size --total-size --no-permissions --no-user --no-time' # Listar archivos ordenados por tamaño total, sin detalles innecesarios
+
+# Cambia el directorio actual de la terminal al que tengas abierto en el Finder:
+alias caf='cd "$(osascript -e "tell application \"Finder\" to if (count of Finder windows) > 0 then get POSIX path of (target of front window as alias)")"'
+
+# --- ATAJOS DE GIT ---
+alias ga='git add'
+alias gc='git commit -m' 
+alias gp='git push'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gpl='git pull'
+alias gcl='git clone'
+
+# --- ALIAS PARA MULTIMEDIA Y OCR ---
+alias ocr-todo='mkdir -p procesados && for f in *.pdf; do ocrmypdf -l spa --deskew "$f" "procesados/$f"; done' # OCR: Hace que todos los PDFs de la carpeta actual sean leíbles (los pone en /procesados)
+alias youtube-audio='yt-dlp -x --audio-format m4a --add-metadata --embed-thumbnail' # Música: Baja audio de YouTube con la mejor calidad y carátula para tu biblioteca
+alias mirar='bat "$(fzf)"' # Visualizador rápido: Eliges un archivo con fzf y lo ves con bat (maneja espacios en nombres)
+
 # --- MANTENIMIENTO Y SISTEMA ---
 alias limpiarbrew='brew cleanup --prune=all && brew autoremove' # Borra basura y archivos temporales de Homebrew
 alias dsize='du -sh * | sort -h'                                # Muestra peso de archivos ordenados de menor a mayor
@@ -35,20 +57,6 @@ topgrade() {
     echo "\n🔒 Privacidad y dueños restaurados para $USER2_NAME."
    
 }
-
-# --- ATAJOS DE NAVEGACIÓN (Nuevos comandos) ---
-alias c='clear'            # Limpia la pantalla de la terminal rápidamente
-alias lsa='eza -a --icons --group-directories-first --sort=extension' # Listar TODO (incluyendo archivos ocultos)
-alias lsh='eza -a --icons --group-directories-first | grep "^\."'     # Mostrar ÚNICAMENTE los archivos ocultos
-alias lst='eza -T -lh --icons --group-directories-first --sort=size --total-size --no-permissions --no-user --no-time' # Listar archivos ordenados por tamaño total, sin detalles innecesarios
-
-# Cambia el directorio actual de la terminal al que tengas abierto en el Finder:
-alias caf='cd "$(osascript -e "tell application \"Finder\" to if (count of Finder windows) > 0 then get POSIX path of (target of front window as alias)")"'
-
-# --- ALIAS PARA MULTIMEDIA Y OCR ---
-alias ocr-todo='mkdir -p procesados && for f in *.pdf; do ocrmypdf -l spa --deskew "$f" "procesados/$f"; done' # OCR: Hace que todos los PDFs de la carpeta actual sean leíbles (los pone en /procesados)
-alias youtube-audio='yt-dlp -x --audio-format m4a --add-metadata --embed-thumbnail' # Música: Baja audio de YouTube con la mejor calidad y carátula para tu biblioteca
-alias mirar='bat "$(fzf)"' # Visualizador rápido: Eliges un archivo con fzf y lo ves con bat (maneja espacios en nombres)
 
 # --- INICIALIZACIONES ---
 # Activa la navegación inteligente de zoxide (aprende a qué carpetas vas más seguido)
