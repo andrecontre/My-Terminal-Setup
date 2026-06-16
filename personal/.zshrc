@@ -32,10 +32,12 @@ alias gcl='git clone'
 # --- ALIAS PARA MULTIMEDIA Y OCR ---
 alias ocr-todo='mkdir -p procesados && for f in *.pdf; do ocrmypdf -l spa --deskew "$f" "procesados/$f"; done' # OCR: Hace que todos los PDFs de la carpeta actual sean leíbles (los pone en /procesados)
 alias youtube-audio='yt-dlp -x --audio-format m4a --add-metadata --embed-thumbnail' # Música: Baja audio de YouTube con la mejor calidad y carátula para tu biblioteca
+alias youtube-mp3='yt-dlp -x --audio-format mp3 --audio-quality 0 --add-metadata --embed-thumbnail'  #Música: Baja audio de YouTube con la mejor calidad y carátula para tu MP3
 alias mirar='bat "$(fzf)"' # Visualizador rápido: Eliges un archivo con fzf y lo ves con bat (maneja espacios en nombres)
 
 # --- MANTENIMIENTO Y SISTEMA ---
 alias limpiarbrew='brew cleanup --prune=all && brew autoremove' # Borra basura y archivos temporales de Homebrew
+alias brew-check='brew outdated --cask --greedy'                # Para ver qué apps tienen versión nueva
 alias dsize='du -sh * | sort -h'                                # Muestra peso de archivos ordenados de menor a mayor
 
 # --- MANTENIMIENTO GLOBAL Y PERMISOS MULTI-USUARIO ---
