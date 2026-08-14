@@ -34,6 +34,7 @@ alias ocr-todo='mkdir -p procesados && for f in *.pdf; do ocrmypdf -l spa --desk
 alias youtube-audio='yt-dlp -x --audio-format m4a --add-metadata --embed-thumbnail' # Música: Baja audio de YouTube con la mejor calidad y carátula para tu biblioteca
 alias youtube-mp3='yt-dlp -x --audio-format mp3 --audio-quality 0 --add-metadata --embed-thumbnail'  #Música: Baja audio de YouTube con la mejor calidad y carátula para tu MP3
 alias mirar='bat "$(fzf)"' # Visualizador rápido: Eliges un archivo con fzf y lo ves con bat (maneja espacios en nombres)
+alias scan='vt scan file'
 
 # --- MANTENIMIENTO Y SISTEMA ---
 alias limpiarbrew='brew cleanup --prune=all && brew autoremove' # Borra basura y archivos temporales de Homebrew
