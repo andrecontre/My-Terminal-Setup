@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "Cheatsheet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readme"
+              "title": "Cheatsheet"
             }
           }
         ]
@@ -208,8 +208,8 @@
   },
   "active": "262379c9813e9ad5",
   "lastOpenFiles": [
-    "Cheatsheet.md",
     "Readme.md",
+    "Cheatsheet.md",
     "Scripts.md"
   ]
 }
